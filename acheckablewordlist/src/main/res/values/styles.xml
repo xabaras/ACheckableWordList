@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ACheckableWordList">
+        <attr format="boolean" name="acwl_selection_enabled"/>
+        <attr format="color" name="acwl_text_color"/>
+        <attr format="dimension" name="acwl_horizontal_spacing"/>
+        <attr format="dimension" name="acwl_vertical_spacing"/>
+        <attr format="dimension" name="acwl_text_size"/>
+        <attr format="string" name="acwl_separator" />
+    </declare-styleable>
+    <declare-styleable name="Themes">
+        <attr format="reference" name="aCheckableWordListStyle"/>
+    </declare-styleable>
+
+    <style name="ACheckableWordList">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="acwl_text_color">@color/acwl_text_color</item>
+        <item name="acwl_selection_enabled">true</item>
+        <item name="acwl_separator"></item>
+    </style>
+</resources>
