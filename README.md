@@ -3,7 +3,7 @@ This is a simple Android library implementing a (comma) separated word list wher
 
 ## How do I get set up? ##
 
-Soon you're be able to get it via gradle or maven
+Soon you'll be able to get it via gradle and maven
 
 ## Usage ##
 
