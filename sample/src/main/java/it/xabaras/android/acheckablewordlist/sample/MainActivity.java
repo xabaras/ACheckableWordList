@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         Button btnShowSelection = (Button) findViewById(R.id.btnShowSelection);
         btnShowSelection.setOnClickListener(new View.OnClickListener() {
             @Override
