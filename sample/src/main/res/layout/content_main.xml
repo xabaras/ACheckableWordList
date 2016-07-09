@@ -16,7 +16,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to ACheckableWordList sample!\nTry to select/deselect words by tapoing them.\nYou can add words by tapping the pink button in the bottom right corner." />
+        android:text="Welcome to ACheckableWordList sample!\nTry to select/deselect words by tapping them.\nYou can add words by tapping the pink floating button." />
 
     <it.xabaras.android.acheckablewordlist.widget.ACheckableWordList
         android:id="@+id/wordList"

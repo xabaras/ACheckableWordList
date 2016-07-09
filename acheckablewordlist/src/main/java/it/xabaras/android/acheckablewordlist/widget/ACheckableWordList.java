@@ -19,6 +19,10 @@ import it.xabaras.android.logger.Logger;
  * Created by Paolo Montalto on 07/07/16.
  * Copyright (c) 2016 Paolo Montalto. All rights reserved.
  */
+
+/**
+ * This is a simple Android library implementing a (comma) separated word list where each word can be clicked and checked/unchecked.
+ */
 public class ACheckableWordList extends ViewGroup {
     private int horizontalSpacing;
     private int verticalSpacing;
@@ -51,10 +55,19 @@ public class ACheckableWordList extends ViewGroup {
         }
     }
 
+    /**
+     * Register a callback to be invoked when an item in this ACheckableWordList has been clicked.
+     * @param listener The callback that will be invoked.
+     */
     public void setOnItemClickListener(OnItemClickListener listener) {
         mListener = listener;
     }
 
+    /**
+     * Called to determine the size requirements for this view and all of its children.
+     * @param widthMeasureSpec horizontal space requirements as imposed by the parent. The requirements are encoded with View.MeasureSpec.
+     * @param heightMeasureSpec vertical space requirements as imposed by the parent. The requirements are encoded with View.MeasureSpec.
+     */
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         try {
@@ -112,6 +125,14 @@ public class ACheckableWordList extends ViewGroup {
         }
     }
 
+    /**
+     * Called when this view should assign a size and position to all of its children.
+     * @param changed This is a new size or position for this view
+     * @param l Left position, relative to parent
+     * @param t Top position, relative to parent
+     * @param r Right position, relative to parent
+     * @param b Bottom position, relative to parent
+     */
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
         try {
@@ -149,6 +170,11 @@ public class ACheckableWordList extends ViewGroup {
         }
     }
 
+    /**
+     * Convert dp size to pixels
+     * @param dp size in dp
+     * @return size in pixels
+     */
     private float dp2px(float dp) {
         try {
             return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp,
@@ -161,12 +187,21 @@ public class ACheckableWordList extends ViewGroup {
 
     /*** Public methods ***/
 
+    /**
+     * Interface definition for a callback to be invoked when an item in this ACheckableWordList has been clicked.
+     */
     public interface OnItemClickListener {
+        /**
+         * Callback method to be invoked when an item in this ACheckableWordList has been clicked.
+         * @param v The view within the ACheckableWordList that was clicked
+         * @param position The position of the view in the ACheckableWordList.
+         * @param isSelected Whether the clicked word is selected or not
+         */
         void onItemClick(View v, int position, boolean isSelected);
     }
 
     /**
-     * Initializes @ACheckableWordList whith the provided words
+     * Initialize ACheckableWordList with the provided words
      * @param words a list of words
      */
     public void setWords(List<String> words) {
@@ -179,8 +214,8 @@ public class ACheckableWordList extends ViewGroup {
     }
 
     /**
-     * Adds a single word to the list
-     * @param word a word to add
+     * Add a single word to ACheckableWordList
+     * @param word word to be added
      */
     public void addWord(String word) {
         try {
@@ -216,7 +251,7 @@ public class ACheckableWordList extends ViewGroup {
     }
 
     /**
-     * Returns the positions of the selected words
+     * Get the positions of the selected words
      * @return a list of positions
      */
     public List<Integer> getSelection() {
@@ -237,8 +272,8 @@ public class ACheckableWordList extends ViewGroup {
     }
 
     /**
-     * Sets selection of the word at specified position
-     * @param position position of the word to select/unselect
+     * Set selection state of the word at specified position
+     * @param position position of the word to be selected/unselected
      * @param selected true if selected, false otherwise
      */
     public void setWordSelected(int position, boolean selected) {
@@ -251,7 +286,7 @@ public class ACheckableWordList extends ViewGroup {
     }
 
     /**
-     * Removes selection from all words
+     * Set all words in ACheckableWordList as unselected
      */
     public void clearSelection() {
         try {
@@ -263,8 +298,8 @@ public class ACheckableWordList extends ViewGroup {
     }
 
     /**
-     * Returns the number of words in the list
-     * @return
+     * Get the number of words in the list
+     * @return the number of words in ACheckableWordList
      */
     public int getWordCount() {
         try {
@@ -276,8 +311,8 @@ public class ACheckableWordList extends ViewGroup {
     }
 
     /**
-     * Removes word at selected position
-     * @param position position of the word to remove
+     * Remove word at selected position
+     * @param position position of the word to be removed
      */
     public void removeWordAt(int position) {
         try {
@@ -293,7 +328,7 @@ public class ACheckableWordList extends ViewGroup {
     }
 
     /**
-     * Removes all the words from the list
+     * Remove all the words in the ACheckableWordList
      */
     public void removeAllWords() {
         try {
