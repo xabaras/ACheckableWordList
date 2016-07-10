@@ -1,9 +1,25 @@
 # ACheckableWordList
 This is a simple Android library implementing a (comma) separated word list where each word can be clicked and cheched/unchecked.
 
+[ ![Download](https://api.bintray.com/packages/xabaras/maven/acheckablewordlist/images/download.svg) ](https://bintray.com/xabaras/maven/acheckablewordlist/_latestVersion)
+
 ## How do I get set up? ##
 
-Soon you'll be able to get it via gradle and maven
+Get it via Gradle
+```groovy
+compile 'it.xabaras.android:acheckablewordlist:1.0.1'
+```
+or Maven
+```xml
+<dependency>
+  <groupId>it.xabaras.android</groupId>
+  <artifactId>acheckablewordlist</artifactId>
+  <version>1.0.1</version>
+  <type>pom</type>
+</dependency>
+```
+
+Or download the [latest AAR](https://bintray.com/xabaras/maven/acheckablewordlist/_latestVersion) and add it to your project's libraries.
 
 ## Usage ##
 
