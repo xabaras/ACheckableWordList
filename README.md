@@ -23,7 +23,7 @@ Or download the [latest AAR](https://bintray.com/xabaras/maven/acheckablewordlis
 
 ## Usage ##
 
-Here is a non-comprehensive guide to ACheckableWordList for any further iformation you can reference the library javadoc, sources and/or sample app sources.
+Here is a non-comprehensive guide to ACheckableWordList for any further iformation you can reference the library [javadoc](https://xabaras.github.io/ACheckableWordList/javadoc/), the sources and/or the sample app sources.
 
 You just have to add ACheckableWordList to your xml layout the usual way:
 
