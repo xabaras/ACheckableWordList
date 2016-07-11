@@ -97,7 +97,19 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+#page
+{
+	border-left: 1px solid;
+    border-right: 1px solid;
+    margin: 0 auto;
+    padding: 16px;
+    width: 900px;
+}
 
+#page h1
+{
+	margin-top: 0;
+}
 
 /* ==========================================================================
    Helper classes

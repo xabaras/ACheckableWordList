@@ -1,10 +1,9 @@
 $(document).ready(function() {
-	jQuery.get('https://github.com/xabaras/ACheckableWordList/blob/master/README.md', function(data) {
+	jQuery.get('http://cors.io/?u=https://raw.githubusercontent.com/xabaras/ACheckableWordList/master/README.md', function(data) {
 	   //process text file line by line
 	   var converter = new showdown.Converter(),
 	   	   html = converter.makeHtml(data);
 	   	   
-   	   	   alert(html);
+   	   	   $('#page').html(html);
 	});
-	
 });
